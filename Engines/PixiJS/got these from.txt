@@ -1,0 +1,19 @@
+has it's own built into package it seems
+
+
+goto an empty directory
+run npm install pixi.js
+
+will download the latest pixi package
+
+
+in the latest package, can probably just point to each of the index.d.ts files in each of the folders, one by one in a list.
+
+that will probably work, only need index.d.ts from each folder
+
+folders are eg
+accessibility
+app
+compressed-textures
+
+etc
