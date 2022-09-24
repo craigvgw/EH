@@ -1,0 +1,255 @@
+/// Generated - Do Not Edit
+namespace spine
+{
+    using System;
+    using System.Collections.Generic;
+    using System.Text.Json.Serialization;
+    using System.Threading.Tasks;
+    using EventHorizon.Blazor.Interop;
+    using EventHorizon.Blazor.Interop.Callbacks;
+    using EventHorizon.Blazor.Interop.ResultCallbacks;
+    using Microsoft.JSInterop;
+
+    
+    
+    [JsonConverter(typeof(CachedEntityConverter<TranslateTimeline>))]
+    public class TranslateTimeline : CurveTimeline
+    {
+        #region Static Accessors
+
+        #endregion
+
+        #region Static Properties
+        
+        public static decimal ENTRIES
+        {
+            get
+            {
+            return EventHorizonBlazorInterop.Get<decimal>(
+                    "spine",
+                    "TranslateTimeline.ENTRIES"
+                );
+            }
+            set
+            {
+
+                EventHorizonBlazorInterop.Set(
+                    "spine",
+                    "TranslateTimeline.ENTRIES",
+                    value
+                );
+            }
+        }
+
+        
+        public static decimal PREV_TIME
+        {
+            get
+            {
+            return EventHorizonBlazorInterop.Get<decimal>(
+                    "spine",
+                    "TranslateTimeline.PREV_TIME"
+                );
+            }
+            set
+            {
+
+                EventHorizonBlazorInterop.Set(
+                    "spine",
+                    "TranslateTimeline.PREV_TIME",
+                    value
+                );
+            }
+        }
+
+        
+        public static decimal PREV_X
+        {
+            get
+            {
+            return EventHorizonBlazorInterop.Get<decimal>(
+                    "spine",
+                    "TranslateTimeline.PREV_X"
+                );
+            }
+            set
+            {
+
+                EventHorizonBlazorInterop.Set(
+                    "spine",
+                    "TranslateTimeline.PREV_X",
+                    value
+                );
+            }
+        }
+
+        
+        public static decimal PREV_Y
+        {
+            get
+            {
+            return EventHorizonBlazorInterop.Get<decimal>(
+                    "spine",
+                    "TranslateTimeline.PREV_Y"
+                );
+            }
+            set
+            {
+
+                EventHorizonBlazorInterop.Set(
+                    "spine",
+                    "TranslateTimeline.PREV_Y",
+                    value
+                );
+            }
+        }
+
+        
+        public static decimal X
+        {
+            get
+            {
+            return EventHorizonBlazorInterop.Get<decimal>(
+                    "spine",
+                    "TranslateTimeline.X"
+                );
+            }
+            set
+            {
+
+                EventHorizonBlazorInterop.Set(
+                    "spine",
+                    "TranslateTimeline.X",
+                    value
+                );
+            }
+        }
+
+        
+        public static decimal Y
+        {
+            get
+            {
+            return EventHorizonBlazorInterop.Get<decimal>(
+                    "spine",
+                    "TranslateTimeline.Y"
+                );
+            }
+            set
+            {
+
+                EventHorizonBlazorInterop.Set(
+                    "spine",
+                    "TranslateTimeline.Y",
+                    value
+                );
+            }
+        }
+        #endregion
+
+        #region Static Methods
+
+        #endregion
+
+        #region Accessors
+
+        #endregion
+
+        #region Properties
+        
+        public decimal boneIndex
+        {
+            get
+            {
+            return EventHorizonBlazorInterop.Get<decimal>(
+                    this.___guid,
+                    "boneIndex"
+                );
+            }
+            set
+            {
+
+                EventHorizonBlazorInterop.Set(
+                    this.___guid,
+                    "boneIndex",
+                    value
+                );
+            }
+        }
+
+        
+        public decimal[] frames
+        {
+            get
+            {
+            return EventHorizonBlazorInterop.GetArray<decimal>(
+                    this.___guid,
+                    "frames"
+                );
+            }
+            set
+            {
+
+                EventHorizonBlazorInterop.Set(
+                    this.___guid,
+                    "frames",
+                    value
+                );
+            }
+        }
+        #endregion
+        
+        #region Constructor
+        public TranslateTimeline() : base() { }
+
+        public TranslateTimeline(
+            ICachedEntity entity
+        ) : base(entity)
+        {
+        }
+
+        public TranslateTimeline(
+            decimal frameCount
+        ) : base()
+        {
+            var entity = EventHorizonBlazorInterop.New(
+                new string[] { "spine", "TranslateTimeline" },
+                frameCount
+            );
+            ___guid = entity.___guid;
+        }
+        #endregion
+
+        #region Methods
+        public decimal getPropertyId()
+        {
+            return EventHorizonBlazorInterop.Func<decimal>(
+                new object[]
+                {
+                    new string[] { this.___guid, "getPropertyId" }
+                }
+            );
+        }
+
+        public void setFrame(decimal frameIndex, decimal time, decimal x, decimal y)
+        {
+            EventHorizonBlazorInterop.Func<CachedEntity>(
+                new object[]
+                {
+                    new string[] { this.___guid, "setFrame" }, frameIndex, time, x, y
+                }
+            );
+        }
+
+        public void apply(Skeleton skeleton, decimal lastTime, decimal time, string[] events, decimal alpha, int blend, int direction)
+        {
+            EventHorizonBlazorInterop.Func<CachedEntity>(
+                new object[]
+                {
+                    new string[] { this.___guid, "apply" }, skeleton, lastTime, time, events, alpha, blend, direction
+                }
+            );
+        }
+        #endregion
+    }
+}

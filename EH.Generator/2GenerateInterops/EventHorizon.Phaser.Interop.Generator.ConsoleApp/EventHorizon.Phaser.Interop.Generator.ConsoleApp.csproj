@@ -1,0 +1,57 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net6.0</TargetFramework>
+        <IsPackable>false</IsPackable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Content Remove="_generated\**" />
+        <Compile Remove="_generated\**" />
+        <EmbeddedResource Remove="_generated\**" />
+        <None Remove="_generated\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="SourceFiles\phaser.d.ts~RF28293040.TMP" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\1InteropGenerator\Source\EventHorizon.Blazor.TypeScript.Interop.Generator\EventHorizon.Blazor.TypeScript.Interop.Generator.csproj" />
+      <ProjectReference Include="..\..\1InteropGenerator\Source\Server\EventHorizon.Blazor.Interop.Generator\EventHorizon.Blazor.Interop.Generator.csproj" />
+      <ProjectReference Include="..\..\1InteropGenerator\Writers\EventHorizon.Blazor.Interop.Generator.Writers.Project\EventHorizon.Blazor.Interop.Generator.Writers.Project.csproj" />
+      <ProjectReference Include="..\..\1InteropGenerator\Writers\EventHorizon.Blazor.TypeScript.Interop.Generator.Writers.Project\EventHorizon.Blazor.TypeScript.Interop.Generator.Writers.Project.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Update="SourceFiles\matter.d.ts">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="SourceFiles\phaser.d.ts">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="SourceFiles\spine.d.ts">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="SourceFiles\spine-canvas.d.ts">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="SourceFiles\SpineContainer.d.ts">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="SourceFiles\SpineFile.d.ts">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="SourceFiles\SpineGameObject.d.ts">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="SourceFiles\SpinePlugin.d.ts">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="SourceFiles\spine-webgl.d.ts">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+
+</Project>
